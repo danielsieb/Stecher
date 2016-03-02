@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		65EDAF9A1C8663F90010FE85 /* Pike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EDAF991C8663F90010FE85 /* Pike.swift */; };
-		65EDAF9C1C8664080010FE85 /* Balloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EDAF9B1C8664080010FE85 /* Balloon.swift */; };
 		CE6562761C86125D005E9E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6562751C86125D005E9E15 /* AppDelegate.swift */; };
 		CE65627A1C86125D005E9E15 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6562791C86125D005E9E15 /* GameScene.swift */; };
 		CE65627C1C86125D005E9E15 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65627B1C86125D005E9E15 /* GameViewController.swift */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		65EDAF991C8663F90010FE85 /* Pike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pike.swift; sourceTree = "<group>"; };
-		65EDAF9B1C8664080010FE85 /* Balloon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balloon.swift; sourceTree = "<group>"; };
 		CE6562721C86125D005E9E15 /* Ninja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ninja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6562751C86125D005E9E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6562791C86125D005E9E15 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				CE6562751C86125D005E9E15 /* AppDelegate.swift */,
 				CE6562791C86125D005E9E15 /* GameScene.swift */,
 				65EDAF991C8663F90010FE85 /* Pike.swift */,
-				65EDAF9B1C8664080010FE85 /* Balloon.swift */,
 				CE65627B1C86125D005E9E15 /* GameViewController.swift */,
 				CE65627D1C86125D005E9E15 /* Main.storyboard */,
 				CE6562801C86125D005E9E15 /* Assets.xcassets */,
@@ -208,7 +205,6 @@
 			files = (
 				CE65627A1C86125D005E9E15 /* GameScene.swift in Sources */,
 				CE65627C1C86125D005E9E15 /* GameViewController.swift in Sources */,
-				65EDAF9C1C8664080010FE85 /* Balloon.swift in Sources */,
 				65EDAF9A1C8663F90010FE85 /* Pike.swift in Sources */,
 				CE6562761C86125D005E9E15 /* AppDelegate.swift in Sources */,
 			);
