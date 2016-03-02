@@ -10,17 +10,17 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    let lanze = SKSpriteNode(imageNamed: "Lanze")
+    let pike = SKSpriteNode(imageNamed: "Pike")
     
     override func didMoveToView(view: SKView) {
         backgroundColor = UIColor(red: 159.0/255.0, green: 201.0/255.0, blue: 244.0/255.0, alpha: 1.0)
-        lanze.position = CGPoint(x: 100, y: 55)
-        lanze.size = CGSize(width: 10, height: 110)
-        addChild(lanze)
+        pike.position = CGPoint(x: 100, y: 55)
+        pike.size = CGSize(width: 10, height: 110)
+        addChild(pike)
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
                 SKAction.runBlock(addBallons),
-                SKAction.waitForDuration(0.5)])))
+                SKAction.waitForDuration(1.0)])))
         }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -31,29 +31,22 @@ class GameScene: SKScene {
         /* Called before each frame is rendered */
     }
     
-    
-    func random() -> CGFloat {
+    func getRandomX() -> CGFloat {
+        let max = Int(frame.size.width) - 10
+        let min = 10
         
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    
-    func random (min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (min-max) + max
+        let rndValue = CGFloat(min + Int(arc4random()) % (max - min))
+
+        return rndValue
     }
     
     
     func addBallons() {
-        let ballon = SKSpriteNode(imageNamed: "Ballon")
-        ballon.position = CGPoint(x: randomX(), y: frame.size.height - 10)
-        addChild(ballon)
+        let balloon = Balloon(positionX: getRandomX(), positionY: frame.size.height - 10)
+        addChild(balloon)
+        if CGPointEqualToPoint(balloon.position, CGPoint(x: balloon.xScale, y: 100)) {
+            balloon.removeFromParent()
+        }
     }
     
-    func randomX() -> CGFloat {
-        if (frame.size.width * random(0, max: 1) ) > (frame.size.width-10) {
-            return frame.size.width * random(0, max: 1) - 20 }
-            
-            else { return frame.size.width * random(0, max: 1) }
-        
-    }
 }
